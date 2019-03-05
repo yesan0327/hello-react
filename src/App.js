@@ -1,22 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+
 import './App.css';
+import Header from './components/Header';
+import Home from './components/Home';
 
 class App extends Component {
-  render() {
-    return (
+    render() {
+        const user={
+            name:"Anna",
+            hobbies:["Sports","Reading"]
+        }
+        return (
 
-      <div className='container'>
-        <div className='row'>
-          <div className='col-xs-1 col-xs-offset-11'>
-            <h1>hello</h1>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-xs-1 col-xs-offset-11'>
+                        <Header/>
+                    </div>
+                </div>
 
-          </div>
+                <div className='row'>
+                    <div className='col-xs-1 col-xs-offset-11'>
+                        <Home name={"Max"} age={99} user={user}>
+                            <p>i am a child</p>
+                        </Home>
+                    </div>
+                </div>
+            </div>
 
-        </div>
-      </div>
-    );
-  }
+
+
+        );
+    }
 }
 
 export default App;
