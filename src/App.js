@@ -5,10 +5,14 @@ import Header from './components/Header';
 import Home from './components/Home';
 
 class App extends Component {
+    onGreet(age) {
+        alert(age);
+    }
+
     render() {
-        const user={
-            name:"Anna",
-            hobbies:["Sports","Reading"]
+        const user = {
+            name: "Anna",
+            hobbies: ["Sports", "Reading"]
         }
         return (
 
@@ -21,7 +25,7 @@ class App extends Component {
 
                 <div className='row'>
                     <div className='col-xs-1 col-xs-offset-11'>
-                        <Home name={"Max"} age={99} user={user}>
+                        <Home name={"Max"} initialAge={9} user={user} greet={this.onGreet}>
                             <p>i am a child</p>
                         </Home>
                     </div>
